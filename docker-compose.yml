@@ -40,6 +40,7 @@ services:
         source: ./logstash/pipeline
         target: /usr/share/logstash/pipeline
         read_only: true
+      - ./mysql-connector-java-8.0.25/mysql-connector-java-8.0.25.jar:/usr/share/logstash/logstash-core/lib/jars/mysql-connector-java-8.0.25.jar #mysql 사용을 위한 jdbc-connector 다운
     ports:
       - "5044:5044"
       - "5000:5000/tcp"
